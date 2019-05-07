@@ -1,6 +1,6 @@
 # awss3operator - OLM Flows
 
-### General Prereqs
+## General Prereqs
 - OCP 4.0 cluster (this will have the marketplace operators already installed).
 - python36 and pip3 to install and build the *operator-courier*
 - Docker
@@ -10,7 +10,7 @@
   image: quay.io/screeley44/aws-s3-provisioner:v1.0.0
 - Create a quay.io account.
 
-### Setup for OperatorHub Catalog
+## Setup for OperatorHub Catalog
 This documents the nuances for building a simple operator and then applying the operator to your local instance of OCP 4.X.
 This repo is a simple example of how to do this.
 
@@ -150,10 +150,23 @@ status:
 ```
 
 2. Now from the OpenShift Console - you can navigate to the Catalog and see your operator in the OperatorHub.
+   Install the operator and you should see it running (it will prompt you for the namespace you want to run it in)
+
+```
+# oc get pods
+NAME                                  READY   STATUS    RESTARTS   AGE
+aws-s3-provisioner-57f6688b56-2v64b   1/1     Running   0          7m24s
+```
+
+Voila!!
+
+
+**The following section discusses another way to add your app to the catalog - it might need to flush out some details, but it
+is close and gives another way to deploy apps in a less formaal manner!**
 
 
 
-### Setup and Building the Registry and Operator - Developer Catalog
+## Setup and Building the Registry and Operator - Developer Catalog
 
 #### Prerequisites and some things to note
 
