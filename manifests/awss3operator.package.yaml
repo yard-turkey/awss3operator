@@ -2,4 +2,4 @@
 packageName: awss3operator
 channels:
 - name: alpha
-  currentCSV: awss3operator.1.0.0
+  currentCSV: awss3operator.1.0.0.clusterserviceversion.yaml
