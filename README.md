@@ -1,1 +1,0 @@
-# awss3operator
