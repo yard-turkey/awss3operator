@@ -4,6 +4,7 @@ metadata:
   name: objectbuckets.objectbucket.io
 spec:
   group: objectbucket.io
+  version: v1alpha1
   versions:
     - name: v1alpha1
       served: true
