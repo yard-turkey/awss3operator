@@ -59,7 +59,7 @@ spec:
     strategy: deployment
     spec:
       permissions:
-      - serviceAccountName: aws-s3-provisioner-0-1-0
+      - serviceAccountName: aws-s3-provisioner-1-0-0
         rules:
         - apiGroups:
           - storage.k8s.io
