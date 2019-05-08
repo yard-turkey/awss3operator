@@ -60,6 +60,7 @@ spec:
     spec:
       clusterPermissions:
       - serviceAccountName: aws-s3-provisioner-1-0-0
+        rules:
         - apiGroups:
           - objectbucket.io
           resources:
