@@ -4,7 +4,7 @@
 - OCP 4.0 cluster (this will have the marketplace operators already installed).
 - python36 and pip3 to install and build the *operator-courier*
 - Docker
-- An operator repo in quay.io (you can build your own) but for most examples we are going to be using 
+- An operator repo and an actual operator image in quay.io (you can build your own) but for most examples we are going to be using 
   [aws-s3-provisioner repo](https://quay.io/repository/screeley44/aws-s3-provisioner)
   and
   image: quay.io/screeley44/aws-s3-provisioner:v1.0.0
