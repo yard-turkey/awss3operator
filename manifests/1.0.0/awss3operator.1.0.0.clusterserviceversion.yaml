@@ -58,6 +58,14 @@ spec:
   install:
     strategy: deployment
     spec:
+      clusterPermissions:
+        - apiGroups:
+          - objectbucket.io
+          resources:
+          - objectbucketclaims
+          - objectbuckets
+          verbs:
+          - "*"                
       permissions:
       - serviceAccountName: aws-s3-provisioner-1-0-0
         rules:
@@ -73,13 +81,6 @@ spec:
           - customresourcedefinitions
           verbs:
           - "*"
-        - apiGroups:
-          - objectbucket.io
-          resources:
-          - objectbucketclaims
-          - objectbuckets
-          verbs:
-          - "*"          
         - apiGroups:
           - ""
           resources:
