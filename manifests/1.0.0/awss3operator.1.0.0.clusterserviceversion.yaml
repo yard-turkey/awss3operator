@@ -59,6 +59,7 @@ spec:
     strategy: deployment
     spec:
       clusterPermissions:
+      - serviceAccountName: aws-s3-provisioner-1-0-0
         - apiGroups:
           - objectbucket.io
           resources:
