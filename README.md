@@ -21,18 +21,30 @@ This repo is a simple example of how to do this.
 2. Name it your username for *Namespace* (i.e. screeley44) and then your repo name (i.e. myoperator)
 
 #### Create your Application Bundle.
-The application bundle contains the CusterResourceDefinitions (CRDs), ClusterServiceVersions (CSVs) and the Package yamls. The structure of the manifests directory allows for some freedom, but the main rule is that you must place all owned CRDs in the same directory as your CSV. The structure from this repo is a good example to follow:
+The application bundle contains the CusterResourceDefinitions (CRDs), ClusterServiceVersions (CSVs) and the Package yamls. The structure of the manifests directory allows for some freedom, but the main rule is that you must place all owned CRDs in the same directory as your CSV. The structure from this repo is a good example to follow for a simple single operator repo:
 ```
+     Single Operator repo example
         --> Repo Root dir
-           --> manifests dir
-              --> version dir 1.0
-                 --> CRD1.yaml
-                 --> CRD2.yaml
-                 --> CSV1.0
-              --> version dir 2.0
-                 --> CRD1.yaml
-                 --> CRD2.yaml
-                 --> CSV2.0                 
+            --> manifests dir
+                --> operator.CRD1.crd.yaml
+                --> operator.CRD1.crd.yaml
+                --> operator.package.yaml
+                --> operator.1.0.0.clusterserviceversion.yaml  <-- original version
+                --> operator.1.0.1.clusterserviceversion.yaml  <-- 2nd version
+
+     More complex Operator or Multiple Operator Repo example
+        --> Repo Root dir
+           --> Operator dir
+             --> manifests dir
+                --> version dir 1.0
+                   --> CRD1.yaml
+                   --> CRD2.yaml
+                   --> CSV1.0
+                --> version dir 2.0
+                   --> CRD1.yaml
+                   --> CRD2.yaml
+                   --> CSV2.0
+           --> Operator2 dir
 ```
 
 The quay.io appregistry will be used and to push your bundle to the registry and this example will
