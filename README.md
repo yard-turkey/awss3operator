@@ -21,9 +21,23 @@ This repo is a simple example of how to do this.
 2. Name it your username for *Namespace* (i.e. screeley44) and then your repo name (i.e. myoperator)
 
 #### Create your Application Bundle.
-This will store your bundle that you build (Manifests - CRDs, CSV and Package yaml). You can see the structure above
-to follow for the general layout of the bundle. The quay.io appregistry will be used and to push your bundle to the registry we will
-use the operator-courier application. Or simply clone this repo whereever you are building your example.
+The application bundle contains the CusterResourceDefinitions (CRDs), ClusterServiceVersions (CSVs) and the Package yamls. The structure of the manifests directory allows for some freedom, but the main rule is that you must place all owned CRDs in the same directory as your CSV. The structure from this repo is a good example to follow:
+```
+        --> Repo Root dir
+           --> manifests dir
+              --> version dir 1.0
+                 --> CRD1.yaml
+                 --> CRD2.yaml
+                 --> CSV1.0
+              --> version dir 2.0
+                 --> CRD1.yaml
+                 --> CRD2.yaml
+                 --> CSV2.0                 
+```
+
+The quay.io appregistry will be used and to push your bundle to the registry and this example will
+use the [operator-courier application](https://github.com/operator-framework/operator-courier/#usage) to do. If you don't
+want to build your own example, just simply clone this repo whereever you are building your example and modify a few files.
 
 1. After building your manifests directory structure and files, the most imporant thing to note is that for now,
    you need the packageName: field from the *operator-package.yaml* to match the name of your quay.io application repo.
