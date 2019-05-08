@@ -3,12 +3,12 @@
 ## General Prereqs
 - OCP 4.0 cluster (this will have the marketplace operators already installed).
 - python36 and pip3 to install and build the *operator-courier*
-- Docker
+- Docker installed.
 - An operator repo and an actual operator image in quay.io (you can build your own) but for most examples we are going to be using 
   [aws-s3-provisioner repo](https://quay.io/repository/screeley44/aws-s3-provisioner)
   and
-  image: quay.io/screeley44/aws-s3-provisioner:v1.0.0
-- Create a quay.io account.
+  image: quay.io/screeley44/aws-s3-provisioner:v1.0.0.
+- A quay.io account that you can login into and create repos and push and pull images.
 
 ## Setup for OperatorHub Catalog
 This documents the nuances for building a simple operator and then applying the operator to your local instance of OCP 4.X.
