@@ -11,14 +11,14 @@ metadata:
     description: Manage the full lifecycle of installing, configuring and managing AWS S3 Provisioner.
     containerImage: quay.io/screeley44/aws-s3-provisioner:v1.0.0
     createdAt: 2019-05-02T16:12:00Z
-    repository: https://github.com/yard-turkey/aws-s3-operator
+    repository: https://github.com/yard-turkey/aws-s3-provisioner
     certified: "false"
     support: OCTO
 spec:
   replaces: awss3operator.1.0.0
   displayName: AWS S3 Operator
   description: |
-    AWS S3 Operator will deploy the AWS S3 Provisioner - more to be added
+    AWS S3 Operator will deploy the AWS S3 Provisioner
   keywords: ['awss3provisioner', 'aws', 'S3', 'provisioner', 'buckets']
 
   maintainers:
@@ -30,8 +30,10 @@ spec:
 
   links:
   - name: AWS S3 Provisioner
-    url: https://github.com/yard-turkey/awss3operator
-  - name: Documentation
+    url: https://github.com/yard-turkey/aws-s3-provisioner
+  - name: Provisioner Examples
+    url: https://github.com/yard-turkey/aws-s3-provisioner/tree/master/examples    
+  - name: Operator Documentation
     url: https://github.com/yard-turkey/awss3operator
 
   labels:
