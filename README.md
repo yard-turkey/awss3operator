@@ -88,7 +88,7 @@ quay.io login api server with your quay account information.
 
 
 # echo $AUTH_TOKEN
-basic c2NyZWVsZXk0NDpDYXQ0NHRpbSE=
+basic xxxxxXXXXXXXXXxxxxxxE=
 ```
 
 3. If that is clean, then we can push this to the appregistry of quay.io.
